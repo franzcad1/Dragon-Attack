@@ -8,10 +8,12 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private Rigidbody2D rBody;
 
+    private bool isLaunchpad;
     private bool isGrounded;
     public Transform feetPos;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public LayerMask whatIsLaunchpad;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         float horiz = Input.GetAxis("Horizontal");
-        
+
         rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
     }
 
@@ -31,8 +33,17 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if(isGrounded == true && (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.W)))){
+        if (isGrounded == true && (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))))
+        {
             rBody.velocity = Vector2.up * jumpForce;
+        }
+
+        isLaunchpad = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsLaunchpad);
+        if (isLaunchpad == true && (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))))
+        {
+            {
+                rBody.velocity = Vector2.up * 20;
+            }
         }
     }
 }

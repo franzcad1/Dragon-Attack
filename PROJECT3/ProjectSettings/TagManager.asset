@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Launchpad
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1007497561
+    locked: 0
+  - name: Player
+    uniqueID: 4274540883
     locked: 0
