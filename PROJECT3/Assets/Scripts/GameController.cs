@@ -6,17 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    private bool gameOver, restart;
+    private bool gameOver, restart, win;
 
     [Header("UI Settings")]
-    public Text scoreText;
+    public Text winText;
+    public Text winText2;
     public Text gameOverText;
+    public Text restartText2;
     public Text restartText;
-
+    public Text timetext;
+    public GameObject panel;
+    public RectTransform NewPos;
     void Start()
     {
         gameOver = restart = false;
-        
+        win = false;
 
     }
     void Update()
@@ -48,6 +52,20 @@ public class GameController : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         gameOver = true;
+        timetext.gameObject.SetActive(false);
+
+    }
+
+    public void Win()
+    {
+        
+        panel.gameObject.SetActive(true);
+        winText.gameObject.SetActive(true);
+        winText2.gameObject.SetActive(true);
+        win = true;
+        restart = true;
+        restartText2.gameObject.SetActive(true);
+        timetext.rectTransform.position = new Vector3(NewPos.position.x, NewPos.position.y, NewPos.position.z); 
     }
 
     
