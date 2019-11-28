@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class End : MonoBehaviour
 {
     private GameController gameControllerScript;
     private Timer timerScript;
+    private bool hasKey;
+    public GameObject ClosedPortal;
+    public Text needKeyText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,14 +45,34 @@ public class End : MonoBehaviour
     {
         if (co.name == "Sol")
         {
-            Destroy(co.gameObject);
-            timerScript.Finish();
-            gameControllerScript.Win();
-            
+            if (hasKey == true)
+            {
+                Destroy(co.gameObject);
+                timerScript.Finish();
+                gameControllerScript.Win();
+            }
+
+            else
+            {
+                needKeyText.gameObject.SetActive(true);
+            }
 
         }
+    }
 
+    void OnTriggerExit2D(Collider2D co)
+    {
+       
+                needKeyText.gameObject.SetActive(false);
+            
 
+        
+    }
+
+    public void KeyGrab()
+    {
+        ClosedPortal.gameObject.SetActive(false);
+        hasKey = true;
     }
 }
 

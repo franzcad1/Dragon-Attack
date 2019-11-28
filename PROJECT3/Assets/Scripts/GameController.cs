@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     private bool gameOver, restart, win;
-
+    
     [Header("UI Settings")]
     public Text winText;
     public Text winText2;
@@ -17,11 +17,12 @@ public class GameController : MonoBehaviour
     public Text timetext;
     public GameObject panel;
     public RectTransform NewPos;
+    
     void Start()
     {
         gameOver = restart = false;
         win = false;
-
+        
     }
     void Update()
     {
@@ -68,5 +69,6 @@ public class GameController : MonoBehaviour
         timetext.rectTransform.position = new Vector3(NewPos.position.x, NewPos.position.y, NewPos.position.z); 
     }
 
+  
     
 }
