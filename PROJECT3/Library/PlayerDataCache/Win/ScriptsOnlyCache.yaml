@@ -3,9 +3,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraFollow
     - DestroyByContact
+    - DontDestroy
     - End
     - GameController
     - Key
+    - KeySound
     - LavaBat
     - PlayerController
     - Timer
@@ -17,6 +19,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -55,6 +58,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -62,35 +69,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9660}
+      Script: {instanceID: 9664}
     - Class: 114
-      Script: {instanceID: 9724}
+      Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9824}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9830}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 10078}
+      Script: {instanceID: 10082}
     - Class: 114
-      Script: {instanceID: 10198}
+      Script: {instanceID: 10202}
     - Class: 114
-      Script: {instanceID: 10266}
+      Script: {instanceID: 10270}
     - Class: 114
-      Script: {instanceID: 10662}
+      Script: {instanceID: 10666}
     - Class: 114
-      Script: {instanceID: 11074}
+      Script: {instanceID: 11078}
     - Class: 114
-      Script: {instanceID: 11108}
-    - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11112}
     - Class: 114
       Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11486}
+    - Class: 114
+      Script: {instanceID: 11540}
+    - Class: 114
+      Script: {instanceID: 24710}
+    - Class: 114
+      Script: {instanceID: 159636}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -158,7 +169,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: de9a71a6979584fc941e2ea0c9692ec9
+      Hash: 1190f04094a4d5423d0c453b494e5e71
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: End
@@ -362,7 +373,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: c3feb85432ced40859fd0ebb09675d12
+      Hash: 02f133bd4ee25db5dbdfabb50f86d2bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -570,7 +581,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 0bf38ff46b8b3256e66a09e805d8a2ce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DontDestroy
+  - hash:
+      serializedVersion: 2
+      Hash: f534194c4d68d49425bd46d83e6da930
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KeySound
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Franz/Desktop/Dragon Attack.exe
+  playerPath: C:/Users/Franz/Desktop/Dragon Attack/Dragon Attack.exe

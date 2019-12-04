@@ -17,10 +17,10 @@ public class GameController : MonoBehaviour
     public Text timetext;
     public GameObject panel;
     public RectTransform NewPos;
-    public GameObject music;
+   
     void Start()
     {
-        Object.DontDestroyOnLoad(music.gameObject);
+        
         gameOver = restart = false;
         win = false;
         

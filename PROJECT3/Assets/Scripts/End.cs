@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class End : MonoBehaviour
 {
+    public AudioSource ding;
     private GameController gameControllerScript;
     private Timer timerScript;
     private bool hasKey;
@@ -14,6 +15,7 @@ public class End : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ding = GetComponent<AudioSource>();
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
 
         if (gameControllerObject != null)
@@ -54,6 +56,7 @@ public class End : MonoBehaviour
 
             else
             {
+                ding.Play();
                 needKeyText.gameObject.SetActive(true);
             }
 

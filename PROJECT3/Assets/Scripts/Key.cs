@@ -5,14 +5,14 @@ using UnityEngine;
 public class Key : MonoBehaviour
 { private End endScript;
     public float tumble = 200;
-
+    
     private Rigidbody2D rBody;
     // Start is called before the first frame update
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
         rBody.angularVelocity = Random.value * tumble;
-
+        
         GameObject endPortal = GameObject.FindWithTag("EndPortal");
 
         if (endPortal != null)
@@ -38,6 +38,7 @@ public class Key : MonoBehaviour
     {
         if (co.name == "Sol")
         {
+            
             Destroy(this.gameObject);
             endScript.KeyGrab();
         }

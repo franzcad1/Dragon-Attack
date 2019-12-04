@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public AudioSource zoom;
     public float speed;
     public float jumpForce;
     private Rigidbody2D rBody;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        zoom = GetComponent<AudioSource>();
         facingRight = true;
         rBody = GetComponent<Rigidbody2D>();
     }
@@ -89,6 +91,7 @@ public class PlayerController : MonoBehaviour
         if (isLaunchpad == true && (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))))
         {
             {
+                zoom.Play();
                 rBody.velocity = Vector2.up * 20;
             }
         }
