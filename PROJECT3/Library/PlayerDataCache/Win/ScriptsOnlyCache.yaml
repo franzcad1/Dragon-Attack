@@ -19,7 +19,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -83,25 +82,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10202}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 10248}
     - Class: 114
-      Script: {instanceID: 10666}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 11078}
+      Script: {instanceID: 10354}
     - Class: 114
-      Script: {instanceID: 11112}
+      Script: {instanceID: 10670}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11082}
+    - Class: 114
+      Script: {instanceID: 11116}
     - Class: 114
       Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11384}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 24710}
-    - Class: 114
-      Script: {instanceID: 159636}
+      Script: {instanceID: 11544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -295,6 +294,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: f534194c4d68d49425bd46d83e6da930
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KeySound
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -323,6 +328,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 0bf38ff46b8b3256e66a09e805d8a2ce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DontDestroy
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -581,18 +592,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 0bf38ff46b8b3256e66a09e805d8a2ce
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DontDestroy
-  - hash:
-      serializedVersion: 2
-      Hash: f534194c4d68d49425bd46d83e6da930
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: KeySound
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
